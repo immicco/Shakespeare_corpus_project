@@ -1,8 +1,9 @@
-filename,title,cycle,author
-001.txt,Sonnet I,to the Young Man,Shakespeare
-002.txt,Sonnet II,to the Young Man,Shakespeare
-003.txt,Sonnet III,to the Young Man,Shakespeare
-004.txt,Sonnet IV,to the Young Man,Shakespeare
-005.txt,Sonnet V,to the Young Man,Shakespeare
-112.txt,Sonnet CXII,to the Young Man,Shakespeare
-130.txt,Sonnet CXXX,to the Dark Lady,Shakespeare
+filename,title,cycle,group
+001.txt,Sonnet I,to the Young Man,Procreation
+002.txt,Sonnet II,to the Young Man,Procreation
+003.txt,Sonnet III,to the Young Man,Procreation
+004.txt,Sonnet IV,to the Young Man,Procreation
+005.txt,Sonnet V,to the Young Man,Procreation
+007.txt,Sonnet VII,to the Young Man,Procreation
+112.txt,Sonnet CXII,to the Young Man,Procreation
+130.txt,Sonnet CXXX,to the Dark Lady,Procreation
