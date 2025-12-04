@@ -1,4 +1,11 @@
 filename,title,cycle,group
+001.txt,Sonnet I,to the Young Man,Procreation
+002.txt,Sonnet II,to the Young Man,Procreation
+003.txt,Sonnet III,to the Young Man,Procreation
+004.txt,Sonnet IV,to the Young Man,Procreation
+005.txt,Sonnet V,to the Young Man,Procreation
+006.txt,Sonnet VI,to the Young Man,Procreation
+007.txt,Sonnet VII,to the Young Man,Procreation
 008.txt,Sonnet VIII,To the Young Man,Procreation
 009.txt,Sonnet IX,To the Young Man,Procreation
 010.txt,Sonnet X,To the Young Man,Procreation
@@ -67,8 +74,8 @@ filename,title,cycle,group
 073.txt,Sonnet LXXIII,To the Young Man,0
 074.txt,Sonnet LXXIV,To the Young Man,0
 075.txt,Sonnet LXXV,To the Young Man,0
-076.txt,Sonnet LXXVI,To the Young Man,Rival Poet
-077.txt,Sonnet LXXVII,To the Young Man,Rival Poet
+076.txt,Sonnet LXXVI,To the Young Man,0
+077.txt,Sonnet LXXVII,To the Young Man,0
 078.txt,Sonnet LXXVIII,To the Young Man,Rival Poet
 079.txt,Sonnet LXXIX,To the Young Man,Rival Poet
 080.txt,Sonnet LXXX,To the Young Man,Rival Poet
@@ -146,3 +153,4 @@ filename,title,cycle,group
 152.txt,Sonnet CLII,To the Dark Lady,0
 153.txt,Sonnet CLIII,To the Dark Lady,0
 154.txt,Sonnet CLIV,To the Dark Lady,0
+
