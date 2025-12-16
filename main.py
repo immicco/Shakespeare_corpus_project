@@ -72,7 +72,7 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
           analyses_list.append(analysis)
           statistics_line = [f, str(analysis.get("words_number", 0)), str(analysis.get("lines_number", 0)), str(analysis.get("ttr", 0)), str(analysis.get("lexical_density", 0))]
           statistics.append(statistics_line)
-    write_csvfile(f"{statistics_filepath}/f"statistics_group_{group}.csv", statistics, headers)
+    write_csvfile(f"{statistics_filepath}/f"statistics_cycle_{cycle}.csv", statistics, headers)
     corpus_analysis = {
         "avg_ttr": 0,
         "avg_words_number": 0,
@@ -144,5 +144,10 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
   
 if __name__ == "__main__":
   sample_analysis = analyze_single_text("corpus", "126.txt")
+  corpus_analysis = analyze_corpus("corpus", "results")
+  fair_youth_analysis = analyze_corpus_cycle("corpus", "results", "data/metadata.csv", "Fair Youth")
+  dark_lady_analysis = analyze_corpus_cycle("corpus", "results", "data/metadata.csv", "Dark Lady")
+  procreation_analysis = analyze_corpus_group("corpus", "results", "data/metadata.csv", "Procreation")
+  procreation_analysis = analyze_corpus_group("corpus", "results", "data/metadata.csv", "Rival Poet")
 
 
