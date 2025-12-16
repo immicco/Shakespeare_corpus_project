@@ -35,6 +35,7 @@ def analyze_corpus(corpus_folder, statistics_filepath):
     corpus_analysis = {
         "avg_ttr": 0,
         "avg_words_number": 0,
+        "avg_unique_words_number": 0
         "avg_lines": 0,
         "avg_lexical_density": 0, 
         "sensations_percentage" = {
@@ -64,9 +65,11 @@ def analyze_corpus(corpus_folder, statistics_filepath):
         total_words += a.get("words_number")
         total_lines += a.get("lines_number")
         total_lexical_density += a.get("lexical_density")
+        total_unique_words += a.get("unique_words_number")
     print(total_lines)
     corpus_analysis["avg_ttr"] = round(total_ttr/total_number, 2)
     corpus_analysis["avg_words_number"]= round(total_words/total_number, 2)
+    corpus_analysis["avg_unique_words_number"] = round(total_unique_words/total_number, 2)
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
     all_personas = []
@@ -111,6 +114,7 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     corpus_analysis = {
         "avg_ttr": 0,
         "avg_words_number": 0,
+        "avg_unique_words_number": 0,
         "avg_lines": 0,
         "avg_lexical_density": 0
         "sensations_percentage" = {
@@ -140,8 +144,10 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
         total_words += a.get("words_number")
         total_lines += a.get("lines_number")
         total_lexical_density += a.get("lexical_density")
+        total_unique_words += a.get("unique_words_number")
     corpus_analysis["avg_ttr"] = round(total_ttr/total_number, 2)
     corpus_analysis["avg_words_number"]= round(total_words/total_number, 2)
+    corpus_analysis["avg_unique_words_number"] = round(total_unique_words/total_number, 2)
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
     for a in analyses_list:
@@ -185,6 +191,7 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     corpus_analysis = {
         "avg_ttr": 0,
         "avg_words_number": 0,
+        "avg_unique_words_number": 0,
         "avg_lines": 0,
         "avg_lexical_density": 0
         "sensations_percentage" =
@@ -210,13 +217,16 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     total_words = 0
     total_lines = 0
     total_lexical_density = 0
+    total_unique_words = 0
     for a in analyses_list:
         total_ttr += a.get("ttr")
         total_words += a.get("words_number")
         total_lines += a.get("lines_number")
         total_lexical_density += a.get("lexical_density")
+        total_unique_words += a.get("unique_words_number")
     corpus_analysis["avg_ttr"] = round(total_ttr/total_number, 2)
     corpus_analysis["avg_words_number"]= round(total_words/total_number, 2)
+    corpus_analysis["avg_unique_words_number"] = round(total_unique_words/total_number, 2)
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
     for a in analyses_list:
