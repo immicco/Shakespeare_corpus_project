@@ -1,5 +1,6 @@
 from file_utils import file_utils.py
 from text_utils import text_utils.py
+from collections import Counter
 
 def analyze_single_text(filepath, filename):
   if not "txt" in filename:
@@ -35,7 +36,22 @@ def analyze_corpus(corpus_folder, statistics_filepath):
         "avg_ttr": 0,
         "avg_words_number": 0,
         "avg_lines": 0,
-        "avg_lexical_density": 0
+        "avg_lexical_density": 0, 
+        "sensations_percentage" = {
+            "vision": 0,
+            "audition": 0,
+            "olfaction": 0,
+            "tactition": 0,
+            "gustation": 0,
+            "interoception": 0
+          
+        },
+        "personas_percentage" = {
+          "I": 0,
+          "thou": 0,
+          "you": 0, 
+          "we": 0
+        }
         }
     total_number = len(analyses_list)
     print(total_number)
@@ -53,6 +69,23 @@ def analyze_corpus(corpus_folder, statistics_filepath):
     corpus_analysis["avg_words_number"]= round(total_words/total_number, 2)
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
+    all_personas = []
+    all_sensations = []
+    for a in analyses_list:
+        personas = a.get("personas")
+        all_personas.extend(personas)
+        sensations = a.get("personas")
+        all_sensations.extend(sensations)
+    personas_counted = Counter(all_personas)
+    sensations_counted = Counter(all_sensations)
+    for k, v in corpus_analysis["personas_percentage"].items():
+        persona_number = personas_counted[k]
+        percentage = round(persona_number/total_number*100, 2)
+        corpus_analysis["personas_percentage"][k] = percentage
+    for k, v in corpus_analysis["sensations_percentage"].items():
+        sensation_number = sensations_counted[k]
+        percentage = round(persona_number/total_number*100, 2)
+        corpus_analysis["sensations_percentage"][k] = percentage
     return corpus_analysis
 
 def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
@@ -80,6 +113,21 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
         "avg_words_number": 0,
         "avg_lines": 0,
         "avg_lexical_density": 0
+        "sensations_percentage" = {
+            "vision": 0,
+            "audition": 0,
+            "olfaction": 0,
+            "tactition": 0,
+            "gustation": 0,
+            "interoception": 0
+          
+        },
+        "personas_percentage" = {
+          "I": 0,
+          "thou": 0,
+          "you": 0, 
+          "we": 0
+        }
         }
     total_number = len(analyses_list)
     print(total_number)
@@ -96,6 +144,21 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     corpus_analysis["avg_words_number"]= round(total_words/total_number, 2)
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
+    for a in analyses_list:
+        personas = a.get("personas")
+        all_personas.extend(personas)
+        sensations = a.get("personas")
+        all_sensations.extend(sensations)
+    personas_counted = Counter(all_personas)
+    sensations_counted = Counter(all_sensations)
+    for k, v in corpus_analysis["personas_percentage"].items():
+        persona_number = personas_counted[k]
+        percentage = round(persona_number/total_number*100, 2)
+        corpus_analysis["personas_percentage"][k] = percentage
+    for k, v in corpus_analysis["sensations_percentage"].items():
+        sensation_number = sensations_counted[k]
+        percentage = round(persona_number/total_number*100, 2)
+        corpus_analysis["sensations_percentage"][k] = percentage
     return corpus_analysis
     
   def analyze_group(corpus_folder, statistics_filepath, metadata_filepath, group):
@@ -156,10 +219,21 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     corpus_analysis["avg_words_number"]= round(total_words/total_number, 2)
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
-
-      
-      
-    
+    for a in analyses_list:
+        personas = a.get("personas")
+        all_personas.extend(personas)
+        sensations = a.get("personas")
+        all_sensations.extend(sensations)
+    personas_counted = Counter(all_personas)
+    sensations_counted = Counter(all_sensations)
+    for k, v in corpus_analysis["personas_percentage"].items():
+        persona_number = personas_counted[k]
+        percentage = round(persona_number/total_number*100, 2)
+        corpus_analysis["personas_percentage"][k] = percentage
+    for k, v in corpus_analysis["sensations_percentage"].items():
+        sensation_number = sensations_counted[k]
+        percentage = round(persona_number/total_number*100, 2)
+        corpus_analysis["sensations_percentage"][k] = percentage    
     return corpus_analysis
 
 if __name__ == "__main__":
