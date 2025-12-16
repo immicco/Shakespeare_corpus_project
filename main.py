@@ -105,8 +105,8 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     texts_to_analyze = {}
     metadata = read_csvfile(metadata_filepath):
     for line in metadata:
-      filename = line.get(filename, "")
-      if group == line.get(group, ""):
+      filename = line.get("filename", "")
+      if group == line.get("group", ""):
         texts_to_analyze[filename] = True
       else:
         texts_to_analyze[filename] = False
