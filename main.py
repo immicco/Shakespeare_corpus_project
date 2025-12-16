@@ -16,6 +16,8 @@ def analyze_single_text(filepath, filename):
   results['lexical_density'] = calculate_lexical_density(text)
   results['avg_word_length'] = average_word_length(text)
   results['longest_word'] = find_longest_word(text)
+  results["personas"] = find_pronouns(text)
+  results['sensations'] = define_sensations(text)
   return results
 
 def analyze_corpus(corpus_folder, statistics_filepath):
