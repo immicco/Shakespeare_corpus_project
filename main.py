@@ -141,7 +141,7 @@ def analyze_cycle(corpus_folder, statistics_filepath, metadata_filepath, cycle):
     corpus_analysis["avg_lines"]= round(total_lines/total_number, 2)
     corpus_analysis["avg_lexical_density"] = round(total_lexical_density/total_number, 2)
     return corpus_analysis
-  
+
 if __name__ == "__main__":
   sample_analysis = analyze_single_text("corpus", "126.txt")
   corpus_analysis = analyze_corpus("corpus", "results")
