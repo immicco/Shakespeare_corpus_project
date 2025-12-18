@@ -118,7 +118,6 @@ def read_txtfile(filepath):
     Returns:
         str: Содержимое файла или сообщение об ошибке
     """
-    
     try:
         with open (filepath, "r", encoding = "utf-8") as file:
             content = file.read()
@@ -129,6 +128,15 @@ def read_txtfile(filepath):
         return "Ошибка: Неверная кодировка файла"
 
 def read_csvfile(filepath):
+	"""
+    Читает содержимое csv файла.
+
+    Args:
+        filepath (str): Путь к файлу
+
+    Returns:
+        list: Список словарей
+    """
 	texts_data = []
 	try:
 		with open (filepath, "r", encoding = "utf-8") as file:
@@ -174,12 +182,12 @@ def write_csvfile(filepath, data, headers):
 
 def write_txtfile(filepath, text):
     """
-    Записывает данные в CSV файл.
+    Записывает данные в текстовый файл.
 
     Args:
         filepath (str): Полный путь к файлу, включая папку и название файла
                        Например: 'results/001.txt'
-        data (list): Список списков [[val1, val2], [val1, val2], ...]
+        text (str): Текст
 
     Returns:
         bool: True если успешно

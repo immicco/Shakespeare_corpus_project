@@ -87,7 +87,7 @@ def calculate_ttr(text):
         text (str): Текст для анализа
 
     Returns:
-        int: Type-Token Ratio
+        float: Type-Token Ratio
     """
     lemmas = lemmatize_english(text)
     unique_words = len(set(lemmas))
@@ -96,26 +96,16 @@ def calculate_ttr(text):
     ttr = round(ttr, 2)
     return ttr
 
-def calculate_ttr_corpus(folderpath):
+def calculate_lexical_density(text):
     """
-    Подсчитывает Type-Token Ratio для корпуса текстов.
+    Подсчитывает лексическую плотность текста.
 
     Args:
-        folderpath (str): корпус (папка с текстовыми файлами)
+        text (str): Текст для анализа
 
     Returns:
-        int: Type-Token Ratio
+        float: Лексическая плотнсть
     """
-    texts_names = get_files_in_folder(folderpath)
-    corpus_united = []
-    for tn in texts_names:
-        text = read_txtfile(f"{folderpath}/{tn}")
-        corpus_united.append(text)
-    corpus_united = "\n".join(corpus_united)
-    corpus_ttr = calculate_ttr(corpus_united)
-    return corpus_ttr
-
-def calculate_lexical_density(text):
     punctuation = ",.:;?!–—"
     for p in punctuation:
         text = text.replace(p, "")
@@ -160,8 +150,13 @@ def calculate_lexical_density(text):
 
 def average_word_length(text):
     """
-    Функция для подсчета средней длины слов в тексте
-    Возвращает среднюю длину слов (float)
+    Подсчитывает среднюю длину слов текста.
+
+    Args:
+        text (str): Текст для анализа
+
+    Returns:
+        float: Средняя длина слов
     """
     punctuation = ",.:;?!–—"
     for p in punctuation:
@@ -189,17 +184,15 @@ def find_longest_word(text):
     longest = list(longest)
     return longest
     
-def count_unique_words(text, return_frequencies=False):
+def count_unique_words(text):
     """
-    Подсчет количества уникальных слов в тексте.
-    Приведение слов к нижнему регистру, удаление пунктуации.
+    Подсчет количества уникальных слов в тексте (с лемматизацией с помощью инструментов nltk).
     
     Args:
         text (str): Исходный текст
-        return_frequencies (bool): Если True, возвращает также словарь частот
     
     Returns:
-        int или tuple: Количество уникальных слов или (количество, словарь частот)
+        int: Количество уникальных слов
     """
     text = text.lower()
     punctuation = ",.:;?!–—"
@@ -340,7 +333,15 @@ sensory_dictionary = {
 
 
 def get_sense_by_word(word):
-    """Найти категорию ощущения по слову"""
+    """
+    Определяет принадлежность слова к одной из шести категорий чувственного восприятия по заранее заданному словарю(с лемматизацией с помощью инструментов nltk).
+    
+    Args:
+        word (str): Слово
+    
+    Returns:
+        str: Категория
+    """
     word_lower = word.lower()
     for k, v in sensory_dictionary.items():
         if word_lower in v:
@@ -349,6 +350,15 @@ def get_sense_by_word(word):
     
 
 def identify_sensations(text):
+    """
+    Определяет принадлежность слов текста к одной из шести категорий чувственного восприятия по заранее заданному словарю(с лемматизацией с помощью инструментов nltk).
+    
+    Args:
+        text (str): Текст
+    
+    Returns:
+        list: Список категорий
+    """
     symbols_to_remove = ".,-–?!;:'"
     for symbol in symbols_to_remove:
         text = text.replace(symbol, " ")
@@ -365,15 +375,24 @@ def identify_sensations(text):
     return sensations_list
 
 def find_pronouns(text):
+    """
+    Проверяет наличие в тексте местоимений I, you thou, we, их падежных, притяжательных и возвратных форм (с лемматизацией с помощью инструментов nltk).
+    
+    Args:
+        text (str): Текст
+    
+    Returns:
+        list: список упомянутых местоимений (в форме личного местоимения именительного падежа, без учёта количества упоминаний)
+    """
     symbols_to_remove = ".,-–?!;:"
     for symbol in symbols_to_remove:
         text = text.replace(symbol, "")
     text = lemmatize_english(text)
     pronouns = {
-        "I": ["I", "me", "mine", "my"],
-        "you": ["you", "your", "yours"],
-        "thou": ["thou", "thee", "thy", "thine"],
-        "we": ["we", "our", "ours"] }
+        "I": ["I", "me", "mine", "my", "myself"],
+        "thou": ["thou", "thee", "thy", "thine", "thyself"],
+        "you": ["you", "your", "yours", "yourself"],
+        "we": ["we", "our", "ours", "ourselves"] }
     personas = []
     for lemma in text:
         for k, v in pronouns.items():
@@ -384,13 +403,23 @@ def find_pronouns(text):
     return personas
 
 def get_most_common_words(text, number):    
+    """
+    Сортирует слова по частотности употребленияб отбирает необходимое количество (с лемматизацией и исключением стоп-слов при помощи инструментов nltk).
+    
+    Args:
+        text (str): Текст
+        number (int): Количество искомых слов
+    
+    Returns:
+        list: Список самых частотных слов
+    """
     symbols_to_remove = ".,-–?!;:"
     for symbol in symbols_to_remove:
         text = text.replace(symbol, "")
     stop_words = set(stopwords.words("english"))
     text = lemmatize_english(text) 
     for lemma in text:
-        if lemma in stop_words or lemma == "the":
+        if lemma in stop_words:
             text.remove(lemma)
     lemmas_counted = Counter(text)
     lemmas_sorted = sorted(lemmas_counted.items(), key=lambda x: x[1], reverse=True)
@@ -398,6 +427,15 @@ def get_most_common_words(text, number):
     return required
 
 def seek_love(text):
+    """
+    Проверяет наличие в тексте слов: "love" и всех его форм, "beloved" ("belov'd") (с лемматизацией при помощи инструментов nltk).
+    
+    Args:
+        text (str): Текст
+    
+    Returns:
+        bool 
+    """
     symbols_to_remove = ".,-–?!;:"
     for symbol in symbols_to_remove:
         text = text.replace(symbol, "")
@@ -408,16 +446,16 @@ def seek_love(text):
             return True
     return False
 
-def count_parts_of_speech(text):
-    symbols_to_remove = ".,-–?!;:"
-    for symbol in symbols_to_remove:
-        text = text.replace(symbol, "")
-    text = lemmatize_english(text)
-    words = word_tokenize(text.lower())
-    tagged = pos_tag(words)
-    parts_of_speech_counted = Counter(words)
-
 def translate_pos_tag(pos_tag):
+    """
+    Преобразует pos_tag в название части речи (более широкую категорию)
+    
+    Args:
+        text (str): Тэг
+    
+    Returns:
+        text (str): Часть речи 
+    """
     part_of_speech = {'CC': "functor", 
     'CD': "numeral", 
     'DT': "determinative", 
@@ -460,12 +498,21 @@ def translate_pos_tag(pos_tag):
         return "?"
     
 def translate_sense(word):
-   senses = {"vision": "зрение",
+    """
+    Переводит на русский названия категорий чувственного восприятия
+    
+    Args:
+        text (str): Название категории на английском
+    
+    Returns:
+        text (str): Название категории на русском
+    """
+    senses = {"vision": "зрение",
              "olfaction": "обоняние",
              "tactition": "прикосновение",
              "gustation": "вкус",
              "audition": "слух",
              "interoception": "внутренние ощущения"}
-   for k, v in senses.items():
+    for k, v in senses.items():
       if word.strip() == k:
          return v
