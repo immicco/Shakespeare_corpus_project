@@ -556,9 +556,9 @@ def generate_report():
   d = f"""Я–ты–мы 
   ___
   В скольких текстах встречается местоимение "I"? {corpus_statisitcs.get("I", 0)}%
-  В скольких текстах встречается thou? {corpus_statisitcs.get("thou", 0)}%
-  В скольких текстах встречается you? {corpus_statisitcs.get("you", 0)}%
-  В скольких текстах встречается we? {corpus_statisitcs.get("I", 0)}%
+  В скольких текстах встречается "thou"? {corpus_statisitcs.get("thou", 0)}%
+  В скольких текстах встречается "you"? {corpus_statisitcs.get("you", 0)}%
+  В скольких текстах встречается "we"? {corpus_statisitcs.get("I", 0)}%
   """
   e = f"""Распределение слов по частям речи (в процентах):
 
@@ -588,12 +588,12 @@ def generate_report():
       elif float(fy_data.get(s, 0)) < float(dl_data.get(s, 0)):
         lines_of_comparison.append(f"Fair Youth {fy_data.get(s, 0)} |>>> Dark Lady {dl_data.get(s, 0)} ")
   for p in personas:
-      if float(fy_data.get(s, 0)) > float(dl_data.get(s, 0)):
-        lines_of_comparison2.append(f"Fair Youth {fy_data.get(s, 0)} <<<| Dark Lady {dl_data.get(s, 0)} ")
-      elif float(fy_data.get(s, 0)) == float(dl_data.get(s, 0)):
-        lines_of_comparison2.append(f"Fair Youth {fy_data.get(s, 0)} ||| Dark Lady {dl_data.get(s, 0)} ")
-      elif float(fy_data.get(s, 0)) < float(dl_data.get(s, 0)):
-        lines_of_comparison2.append(f"Fair Youth {fy_data.get(s, 0)} |>>> Dark Lady {dl_data.get(s, 0)} ")
+      if float(fy_data.get(p, 0)) > float(dl_data.get(p, 0)):
+        lines_of_comparison2.append(f"Fair Youth {fy_data.get(p, 0)} <<<| Dark Lady {dl_data.get(p, 0)} ")
+      elif float(fy_data.get(p, 0)) == float(dl_data.get(p, 0)):
+        lines_of_comparison2.append(f"Fair Youth {fy_data.get(p, 0)} ||| Dark Lady {dl_data.get(p, 0)} ")
+      elif float(fy_data.get(p, 0)) < float(dl_data.get(p, 0)):
+        lines_of_comparison2.append(f"Fair Youth {fy_data.get(p, 0)} |>>> Dark Lady {dl_data.get(p, 0)} ")
   lines_of_comparison3 = []
   if float(fy_data.get("avg_ttr", 0)) > float(dl_data.get("avg_ttr", 0)):
         lines_of_comparison3.append(f"Fair Youth {fy_data.get("avg_ttr", 0)} <<<| Dark Lady {dl_data.get("avg_ttr", 0)} ")
@@ -602,7 +602,7 @@ def generate_report():
   elif float(fy_data.get("avg_ttr", 0)) < float(dl_data.get("avg_ttr", 0)):
         lines_of_comparison3.append(f"Fair Youth {fy_data.get("avg_ttr", 0)} |>>> Dark Lady {dl_data.get("avg_ttr", 0)} ")
 
-  if float(fy_data.get("avg_lexical_density", 0)) - float(dl_data.get("avg_lexical_density", 0)):
+  if float(fy_data.get("avg_lexical_density", 0)) > float(dl_data.get("avg_lexical_density", 0)):
         lines_of_comparison3.append(f"Fair Youth {fy_data.get("avg_lexical_density", 0)} <<<| Dark Lady {dl_data.get("avg_lexical_density", 0)} ")
   elif float(fy_data.get("avg_lexical_density", 0)) == float(dl_data.get("avg_lexical_density", 0)):
         lines_of_comparison3.append(f"Fair Youth {fy_data.get("avg_lexical_density", 0)} ||| Dark Lady {dl_data.get("avg_lexical_density", 0)} ")
@@ -639,14 +639,13 @@ def generate_report():
   {lines_of_comparison2[0]}
   
   THOU
-  {lines_of_comparison2[0]}
+  {lines_of_comparison2[1]}
 
-  
   YOU
-  {lines_of_comparison2[0]}
+  {lines_of_comparison2[2]}
   
   WE
-  {lines_of_comparison2[0]}
+  {lines_of_comparison2[3]}
 
   ___
 
@@ -672,12 +671,12 @@ def generate_report():
       elif float(prc_data.get(s, 0)) < float(rp_data.get(s, 0)):
         lines_of_comparison.append(f"Procreation {prc_data.get(s, 0)} |>>> Rival Poet {rp_data.get(s, 0)} ")
   for p in personas:
-      if float(prc_data.get(s, 0)) > float(rp_data.get(s, 0)):
-        lines_of_comparison2.append(f"Procreation {prc_data.get(s, 0)} <<<| Rival Poet {rp_data.get(s, 0)} ")
-      elif float(prc_data.get(s, 0)) == float(rp_data.get(s, 0)):
-        lines_of_comparison2.append(f"Procreation {prc_data.get(s, 0)} ||| Rival Poet {rp_data.get(s, 0)} ")
-      elif float(prc_data.get(s, 0)) < float(rp_data.get(s, 0)):
-        lines_of_comparison2.append(f"Procreation {prc_data.get(s, 0)} |>>> Rival Poet {rp_data.get(s, 0)} ")
+      if float(prc_data.get(p, 0)) > float(rp_data.get(p, 0)):
+        lines_of_comparison2.append(f"Procreation {prc_data.get(p, 0)} <<<| Rival Poet {rp_data.get(p, 0)} ")
+      elif float(prc_data.get(p, 0)) == float(rp_data.get(p, 0)):
+        lines_of_comparison2.append(f"Procreation {prc_data.get(p, 0)} ||| Rival Poet {rp_data.get(p, 0)} ")
+      elif float(prc_data.get(p, 0)) < float(rp_data.get(p, 0)):
+        lines_of_comparison2.append(f"Procreation {prc_data.get(p, 0)} |>>> Rival Poet {rp_data.get(p, 0)} ")
   lines_of_comparison3 = []
   if float(prc_data.get("avg_ttr", 0)) > float(rp_data.get("avg_ttr", 0)):
         lines_of_comparison3.append(f"Procreation {prc_data.get("avg_ttr", 0)} <<<| Rival Poet {rp_data.get("avg_ttr", 0)} ")
@@ -686,7 +685,7 @@ def generate_report():
   elif float(prc_data.get("avg_ttr", 0)) < float(rp_data.get("avg_ttr", 0)):
         lines_of_comparison3.append(f"Procreation {prc_data.get("avg_ttr", 0)} |>>> Rival Poet {rp_data.get("avg_ttr", 0)}")
 
-  if float(prc_data.get("avg_lexical_density", 0)) - float(rp_data.get("avg_lexical_density", 0)):
+  if float(prc_data.get("avg_lexical_density", 0)) > float(rp_data.get("avg_lexical_density", 0)):
         lines_of_comparison3.append(f"Procreation {prc_data.get("avg_lexical_density", 0)} <<<| Dark Lady {rp_data.get("avg_lexical_density", 0)}")
   elif float(prc_data.get("avg_lexical_density", 0)) == float(rp_data.get("avg_lexical_density", 0)):
         lines_of_comparison3.append(f"Procreation {prc_data.get("avg_lexical_density", 0)} ||| Dark Lady {rp_data.get("avg_lexical_density", 0)}")
@@ -721,14 +720,13 @@ def generate_report():
   {lines_of_comparison2[0]}
   
   THOU
-  {lines_of_comparison2[0]}
+  {lines_of_comparison2[1]}
 
-  
   YOU
-  {lines_of_comparison2[0]}
+  {lines_of_comparison2[2]}
   
   WE
-  {lines_of_comparison2[0]}
+  {lines_of_comparison2[3]}
 
   ___
 
