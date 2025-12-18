@@ -31,6 +31,9 @@ python main.py
 ```bash
 results/report.txt
 ```
+##Авторы:
+@immicco
+@shalopuutnik
 
 
 
