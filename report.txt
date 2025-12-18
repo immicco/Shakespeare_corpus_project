@@ -154,7 +154,7 @@
 
   Тексты с наибольшим количеством слов: Sonnet CVIII
 
-  Тексты с самым высоким: Sonnet XVI, Sonnet XXXVIII, Sonnet CXXII, Sonnet CXXV
+  Тексты с самым высоким Type-Token Ratio: Sonnet XVI, Sonnet XXXVIII, Sonnet CXXII, Sonnet CXXV
 
   Тексты с самой высокой лексической плотностью: Sonnet CXV
 
@@ -3884,5 +3884,6 @@
       местоимения: 7.08%
       наречия: 3.54%
       другие: 16.8%
+
 
     Упоминается ли в тексте любвь: да
