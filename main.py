@@ -810,7 +810,7 @@ def generate_report():
 
   Тексты с наибольшим количеством слов: {", ".join(highest_uw_titles)}
 
-  Тексты с самым высоким: {", ".join(highest_ttr_titles)}
+  Тексты с самым высоким Type-Token Ratio: {", ".join(highest_ttr_titles)}
 
   Тексты с самой высокой лексической плотностью: {", ".join(highest_ld_titles)}
 
