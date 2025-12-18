@@ -1,0 +1,155 @@
+filename,number of words,number of unique words,number of lines,Type-Token Ratio,lexical density,sensations,personas,love,longest words
+001.txt,105,77,14,0.73,0.83,tactition interoception vision gustation olfaction,we thou,no,self-substantial
+002.txt,114,79,14,0.69,0.87,vision tactition interoception,I thou,no,deep-sunken
+003.txt,115,75,14,0.65,0.81,vision olfaction,thou,no,remember'd
+004.txt,101,68,14,0.66,0.86,gustation audition,thou,no,acceptable loveliness profitless
+005.txt,104,79,14,0.76,0.78,audition vision gustation,,no,never-resting
+006.txt,108,67,14,0.62,0.84,gustation,thou,no,self-will'd self-kill'd
+007.txt,100,73,14,0.73,0.8,vision interoception audition,thou,no,new-appearing
+008.txt,110,79,14,0.7,0.81,audition gustation interoception,thou,no,speechless singleness resembling well-tuned
+009.txt,117,82,14,0.7,0.82,interoception tactition vision gustation,thou,yes,children's
+010.txt,112,72,14,0.64,0.79,interoception audition,I thou,yes,kind-hearted
+011.txt,116,84,14,0.72,0.82,olfaction interoception tactition vision,thou,no,featureless
+012.txt,118,81,14,0.69,0.8,vision tactition interoception gustation,thou,no,themselves
+013.txt,108,74,14,0.69,0.85,gustation tactition interoception,I you,yes,determination
+014.txt,112,80,14,0.71,0.72,vision,I thou,no,prognosticate
+015.txt,111,82,14,0.74,0.76,tactition vision,I you,yes,inconstant perfection presenteth
+016.txt,108,83,14,0.78,0.79,interoception vision gustation,I you,no,counterfeit
+017.txt,124,85,14,0.69,0.8,vision olfaction tactition gustation,I you,no,stretched
+018.txt,114,79,14,0.68,0.82,tactition interoception vision,thou,no,complexion possession
+019.txt,115,82,14,0.71,0.85,gustation tactition interoception,I thou,yes,swift-footed
+020.txt,113,78,14,0.69,0.79,audition vision interoception,I thou,yes,master-mistress
+021.txt,117,81,14,0.69,0.77,vision,I,yes,first-born couplement
+022.txt,122,77,14,0.62,0.84,vision interoception tactition,I thou,yes,therefore
+023.txt,114,77,14,0.68,0.77,interoception vision gustation audition,I,yes,o'ercharged
+024.txt,120,76,14,0.63,0.84,vision,I thou you,no,where-through
+025.txt,108,77,14,0.71,0.78,interoception vision tactition,,yes,themselves favourites
+026.txt,118,79,14,0.67,0.82,vision gustation,I thou,yes,graciously whatsoever
+027.txt,111,80,14,0.72,0.81,vision audition,I thou,no,pilgrimage
+028.txt,116,76,14,0.66,0.81,interoception vision,I thou,no,swart-complexion'd
+029.txt,114,82,14,0.72,0.74,vision gustation,I thou,yes,remember'd
+030.txt,116,79,14,0.68,0.76,gustation audition vision,I thou,yes,fore-bemoaned
+031.txt,115,73,14,0.63,0.82,vision,I thou,yes,obsequious
+032.txt,114,85,14,0.75,0.77,vision,I thou,yes,well-contented
+033.txt,109,83,14,0.76,0.83,interoception vision,I,yes,mountain-tops
+034.txt,120,87,14,0.72,0.82,olfaction tactition interoception,I thou,yes,storm-beaten
+035.txt,108,75,14,0.7,0.81,gustation tactition,I thou,yes,authorizing
+036.txt,113,73,14,0.65,0.84,gustation,we I thou,yes,acknowledge
+037.txt,116,75,14,0.65,0.78,vision interoception,I thou,yes,fortune's substance engrafted abundance
+038.txt,112,87,14,0.78,0.84,gustation vision tactition,I thou,no,invention excellent
+039.txt,120,78,14,0.65,0.85,gustation,we I thou,yes,separation
+040.txt,120,76,14,0.63,0.86,gustation audition interoception vision,we I thou,yes,lascivious
+041.txt,110,75,14,0.68,0.83,interoception audition gustation,I thou,no,temptation
+042.txt,130,70,14,0.53,0.84,tactition interoception gustation,I thou,yes,suffering offenders
+043.txt,122,66,14,0.53,0.85,vision,I thou,no,unrespected
+044.txt,117,87,14,0.74,0.81,vision audition,I thou,no,substance injurious receiving
+045.txt,105,77,14,0.73,0.81,tactition interoception,I thou,yes,present-absent
+046.txt,117,63,14,0.54,0.82,vision,I thou,yes,impanneled appearance determined
+047.txt,122,70,14,0.57,0.77,vision,I thou,yes,thoughts famish'd
+048.txt,118,85,14,0.72,0.79,interoception tactition audition,I thou,no,falsehood
+049.txt,113,78,14,0.69,0.8,vision audition interoception,I thou,yes,strangely converted knowledge
+050.txt,118,83,14,0.7,0.78,interoception audition,I thou,yes,sometimes
+051.txt,121,75,14,0.62,0.84,vision gustation,I thou,yes,wilful-slow
+052.txt,110,79,14,0.72,0.86,gustation vision tactition interoception,I you,no,worthiness imprison'd
+053.txt,107,65,14,0.61,0.81,vision,we you,no,counterfeit
+054.txt,111,75,14,0.67,0.85,gustation vision olfaction interoception,we I you,no,canker-blooms
+055.txt,106,75,14,0.71,0.8,vision interoception,you,no,all-oblivious
+056.txt,112,81,14,0.72,0.87,gustation interoception vision,thou,yes,contracted
+057.txt,118,75,14,0.64,0.8,vision gustation,I you,yes,world-without-end
+058.txt,112,69,14,0.62,0.8,interoception,I you,no,self-doing imprison'd sufferance
+059.txt,109,80,14,0.73,0.78,interoception vision,we I you,no,revolution
+060.txt,108,82,14,0.76,0.78,vision,we I thou,no,wherewith parallels
+061.txt,121,79,14,0.65,0.8,vision,I thou,yes,elsewhere
+062.txt,107,65,14,0.61,0.84,vision audition,I thou,no,self-loving
+063.txt,110,74,14,0.67,0.79,interoception vision gustation,I,yes,confounding
+064.txt,112,77,14,0.69,0.83,vision interoception,I,yes,interchange
+065.txt,112,86,14,0.77,0.81,tactition interoception vision,I,yes,impregnable
+066.txt,89,68,14,0.76,0.78,vision interoception gustation audition,I,yes,doctor-like tongue-tied controlling
+067.txt,106,77,14,0.72,0.77,vision interoception,,no,indirectly
+068.txt,108,75,14,0.69,0.81,interoception vision,,no,sepulchres
+069.txt,123,83,14,0.67,0.81,vision gustation audition olfaction,thou,no,thoughts matcheth uttering confound although
+070.txt,110,75,14,0.68,0.85,gustation vision,thou,yes,present'st
+071.txt,123,80,14,0.64,0.8,audition gustation vision,I you,yes,compounded
+072.txt,119,75,14,0.64,0.8,,I you,yes,willingly
+073.txt,121,83,14,0.69,0.81,vision interoception tactition gustation,I thou,yes,perceivest
+074.txt,113,69,14,0.61,0.8,,I thou,no,consecrate remembered
+075.txt,117,75,14,0.64,0.77,gustation tactition vision interoception olfaction,I you,no,sweet-season'd
+076.txt,114,71,14,0.62,0.86,vision gustation,I you,yes,invention compounds new-found variation
+077.txt,108,70,14,0.65,0.88,vision interoception gustation,thou,no,acquaintance
+078.txt,110,74,14,0.67,0.81,vision gustation,I thou,no,assistance
+079.txt,116,78,14,0.67,0.85,audition gustation,I thou,yes,gracious deserves argument behavior worthier
+080.txt,116,80,14,0.69,0.81,audition gustation interoception tactition,I you,yes,tongue-tied
+081.txt,119,74,14,0.62,0.85,olfaction vision audition gustation interoception,I you,no,o'er-read forgotten breathers
+082.txt,105,77,14,0.73,0.83,vision tactition interoception,I thou,yes,time-bettering
+083.txt,116,81,14,0.7,0.85,tactition vision audition,I you,no,therefore
+084.txt,115,76,14,0.65,0.86,vision,you,no,counterpart
+085.txt,110,79,14,0.72,0.77,gustation tactition audition interoception,I you,yes,well-refined
+086.txt,110,85,14,0.77,0.84,interoception audition,I you,no,intelligence
+087.txt,117,81,14,0.69,0.84,tactition,I thou,no,determinate
+088.txt,112,71,14,0.63,0.79,vision interoception,I thou,yes,double-vantage
+089.txt,111,78,14,0.7,0.84,vision gustation,we I thou,yes,acquaintance
+090.txt,121,76,14,0.63,0.82,gustation,I thou,no,after-loss
+091.txt,114,71,14,0.62,0.79,interoception,I thou,yes,new-fangled particulars
+092.txt,120,75,14,0.62,0.79,interoception vision,I thou,yes,blessed-fair
+093.txt,114,78,14,0.68,0.82,vision gustation,I thou,yes,sweetness therefore supposing
+094.txt,106,72,14,0.68,0.79,interoception vision tactition gustation olfaction,,no,temptation excellence themselves
+095.txt,112,82,14,0.73,0.83,gustation olfaction vision audition tactition,thou,no,lascivious habitation
+096.txt,120,75,14,0.62,0.83,audition tactition vision interoception,I thou,yes,translated wantonness
+097.txt,108,82,14,0.76,0.8,interoception vision,I thou,no,december's unfather'd
+098.txt,118,82,14,0.69,0.76,gustation olfaction vision,I you,no,proud-pied
+099.txt,125,86,15,0.69,0.8,gustation olfaction interoception audition vision,I thou,yes,complexion
+100.txt,111,78,14,0.7,0.84,vision audition gustation,I thou,yes,prevent'st
+101.txt,114,73,14,0.65,0.82,vision audition,I thou,yes,intermix'd'
+102.txt,117,79,14,0.68,0.82,interoception vision gustation audition tactition,we I you,yes,strengthen'd merchandized
+103.txt,117,75,14,0.64,0.82,vision tactition,I you,no,invention over-goes
+104.txt,117,80,14,0.68,0.87,vision tactition interoception olfaction gustation audition,I thou you,no,dial-hand beauteous perceived
+105.txt,105,63,14,0.6,0.81,vision,I,yes,excellence expressing difference
+106.txt,110,73,14,0.66,0.77,vision gustation,we you,no,descriptions
+107.txt,113,87,14,0.77,0.8,interoception vision olfaction,I thou,yes,incertainties
+108.txt,115,88,14,0.77,0.83,gustation olfaction vision,I thou,yes,antiquity necessary character
+109.txt,115,73,14,0.63,0.79,interoception,I thou,yes,preposterously
+110.txt,118,82,14,0.69,0.84,vision gustation,I thou,yes,affections
+111.txt,110,77,14,0.7,0.83,interoception gustation olfaction,I you,no,correction bitterness
+112.txt,116,74,14,0.64,0.8,vision gustation tactition audition,I you,yes,o'er-green impression
+113.txt,118,76,14,0.64,0.78,vision tactition audition gustation,I you,no,effectually deformed'st
+114.txt,113,71,14,0.64,0.8,vision gustation,I you,yes,monarch's cherubins
+115.txt,115,80,14,0.7,0.89,interoception tactition audition,I you,yes,incertainty
+116.txt,109,75,14,0.69,0.79,vision interoception,I,yes,impediments
+117.txt,110,75,14,0.68,0.77,vision,I you,yes,dear-purchased
+118.txt,112,78,14,0.71,0.78,gustation interoception olfaction,we I you,yes,ne'er-cloying
+119.txt,113,84,14,0.74,0.8,olfaction interoception vision,I,yes,distraction
+120.txt,117,75,14,0.64,0.82,tactition interoception,we I you,no,transgression
+121.txt,115,78,14,0.68,0.81,interoception tactition vision,we I,no,salutation adulterate themselves
+122.txt,105,82,14,0.78,0.79,interoception tactition,I thou,yes,forgetfulness
+123.txt,116,83,14,0.72,0.79,vision interoception audition,we I thou,no,therefore registers continual dressings wondering
+124.txt,109,75,14,0.69,0.74,interoception tactition vision,we I,yes,short-number'd
+125.txt,106,83,14,0.78,0.82,vision gustation,I thou,no,obsequious
+126.txt,96,71,12,0.74,0.86,tactition vision gustation interoception audition,I thou,no,withering sovereign
+127.txt,111,77,14,0.69,0.81,vision olfaction gustation interoception,I,no,slandering successive
+128.txt,111,80,14,0.72,0.85,audition gustation tactition,I thou,no,situation confounds
+129.txt,110,71,14,0.65,0.79,interoception gustation,,no,possession
+130.txt,123,79,14,0.64,0.83,vision olfaction interoception audition,I,yes,mistress'
+131.txt,119,74,14,0.62,0.82,vision interoception,I thou,yes,judgment's
+132.txt,114,79,14,0.69,0.79,vision tactition interoception olfaction,I thou,yes,complexion
+133.txt,122,70,14,0.57,0.84,gustation vision,I thou,no,engross'd threefold
+134.txt,120,65,14,0.54,0.81,interoception,I thou,no,surety-like
+135.txt,116,69,14,0.59,0.79,gustation,I thou,no,beseechers acceptance
+136.txt,124,66,14,0.53,0.78,gustation interoception tactition,we I thou,yes,love-suit something
+137.txt,124,76,14,0.61,0.86,vision olfaction,I thou,yes,over-partial
+138.txt,118,68,14,0.58,0.8,gustation,we I,yes,suppress'd subtleties
+139.txt,120,81,14,0.68,0.8,vision gustation tactition,I thou,yes,o'er-press'd
+140.txt,118,84,14,0.71,0.83,tactition gustation interoception vision,I thou,yes,ill-wresting pity-wanting
+141.txt,118,80,14,0.68,0.76,vision gustation tactition olfaction,I thou,yes,delighted
+142.txt,117,75,14,0.66,0.83,vision,I thou,yes,self-example
+143.txt,119,78,14,0.66,0.81,audition tactition,I thou,no,discontent
+144.txt,113,75,14,0.65,0.83,interoception vision olfaction,I,yes,another's
+145.txt,97,69,14,0.71,0.8,audition gustation,I you,yes,languish'd
+146.txt,113,79,14,0.7,0.84,interoception,I thou,no,inheritors
+147.txt,107,72,14,0.67,0.85,interoception gustation vision,I thou,yes,prescriptions
+148.txt,123,73,14,0.59,0.85,vision olfaction,I thou,yes,correspondence
+149.txt,117,71,14,0.61,0.79,vision,I thou,yes,commanded
+150.txt,118,74,14,0.63,0.8,vision interoception audition,I thou,yes,insufficiency
+151.txt,119,80,14,0.67,0.82,interoception audition gustation tactition,I thou,yes,triumphant conscience
+152.txt,124,67,14,0.56,0.8,vision olfaction,I thou,yes,enlighten constancy blindness
+153.txt,110,73,14,0.66,0.83,tactition interoception vision,I,yes,valley-fountain
+154.txt,107,73,14,0.68,0.81,interoception tactition,I,yes,heart-inflaming
